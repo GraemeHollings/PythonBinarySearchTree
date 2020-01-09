@@ -25,6 +25,7 @@ class Node:
         else:
             self.data = data
 
+    #This method will find any supplied value in the search tree, by comparing the values from left to right
     def findval(self, lkpval):
         if lkpval < self.data:
             if self.left is None:
@@ -37,6 +38,7 @@ class Node:
         else:
             print(str(self.data) + ' is found')
 
+    #Printing the value if a supplied value is located
     def PrintTree(self):
         if self.left:
             self.left.PrintTree()
@@ -45,7 +47,7 @@ class Node:
             self.right.PrintTree()
 
 
-
+#Getting input from the user and inserting values
 initRoot = input("Enter the initial value for the root: ") 
 root = Node(initRoot)
  
