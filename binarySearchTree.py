@@ -26,15 +26,15 @@ class Node:
             self.data = data
 
     #This method will find any supplied value in the search tree, by comparing the values from left to right
-    def findval(self, lkpval):
-        if lkpval < self.data:
+    def findval(self, locateValue):
+        if locateValue < self.data:
             if self.left is None:
-                return str(lkpval)+" Not Found"
-            return self.left.findval(lkpval)
-        elif lkpval > self.data:
+                return str(locateValue)+" Not Found"
+            return self.left.findval(locateValue)
+        elif locateValue > self.data:
             if self.right is None:
-                return str(lkpval)+" Not Found"
-            return self.right.findval(lkpval)
+                return str(locateValue)+" Not Found"
+            return self.right.findval(locateValue)
         else:
             print(str(self.data) + ' is found')
 
